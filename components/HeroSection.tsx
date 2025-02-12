@@ -21,7 +21,7 @@ const HeroSection = () => {
       </div>
 
       {/* Main content */}
-      <main className="relative z-10 flex flex-col w-10/12 items-center justify-center mx-auto text-center space-y-6 px-4 sm:px-8">
+      <main className="relative z-10 flex flex-col w-10/12  lg:w-7/12 items-center justify-center mx-auto text-center space-y-6 px-4 sm:px-8">
         <h1 className="text-5xl sm:text-5xl font-bold lg:mt-24">
           Plan Your{" "}
           <span className="bg-[#fcd8c9] rounded-xl px-4 py-1/2 my-2 text-nowrap">
