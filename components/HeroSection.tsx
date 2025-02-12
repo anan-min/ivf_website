@@ -29,7 +29,7 @@ const HeroSection = () => {
           </span>{" "}
           with Confidence
         </h1>
-        <p className="text-lg sm:text-2xl text-gray-700">
+        <p className="text-sm sm:text-2xl text-gray-700">
           Take the stress out of your IVF planning. Select your first date and
           receive a personalized timeline, event details, and pricing tailored
           to your needs.
