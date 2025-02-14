@@ -13,7 +13,7 @@ const features = [
     href: "/planning",
     cta: "Start planning",
     background: <img className="absolute -right-20 -top-20 opacity-60" />,
-    className: "lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-3", // Largest area
+    className: "lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-4", // Largest area
   },
   {
     Icon: InfoCircledIcon,
@@ -31,7 +31,7 @@ const features = [
     href: "/packages",
     cta: "View packages",
     background: <img className="absolute -right-20 -top-20 opacity-60" />,
-    className: "lg:col-start-3 lg:col-end-4 lg:row-start-2 lg:row-end-3", // Smallest area
+    className: "lg:col-start-3 lg:col-end-4 lg:row-start-2 lg:row-end-4", // Smallest area
   },
 ];
 
