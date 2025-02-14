@@ -35,10 +35,10 @@ const HeroSection = () => {
           to your needs.
         </p>
         <div className="flex flex-row space-x-4">
-          <Button className="px-6 py-3 bg-white hover:bg-[#e9e3e0]  text-stone-7000 font-medium">
+          <Button className="px-6 py-4 bg-white hover:bg-[#e9e3e0]  text-stone-7000 font-medium text-xl mt-4">
             Learn More
           </Button>
-          <Button className="text-grey-700 px-6 py-3 bg-[#ffc1b5] hover:bg-[#ffd5cd]  font-medium">
+          <Button className="text-grey-700 px-6 py-4 bg-[#ffc1b5] hover:bg-[#ffd5cd]  font-medium text-xl mt-4">
             Start Planning
           </Button>
         </div>
