@@ -3,7 +3,8 @@ import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
 import Faqs from "@/components/Faqs";
 import { BentoCards } from "@/components/BentoCards";
-import { TimelineCard } from "@/components/Timeline/Phase1TimelineCard";
+import { TimelineCard } from "@/components/Timeline/TimelineCard";
+import Phase1Timeline from "@/components/Timeline/Phase1Timeline";
 
 export default function Home() {
   return (
@@ -15,7 +16,11 @@ export default function Home() {
           {/* Cards */}
           <Faqs />
           <BentoCards />
-          <TimelineCard />
+          <TimelineCard
+            title="Timeline 1"
+            description="Description 1"
+            TimelineComponent={Phase1Timeline}
+          />
         </section>
       </main>
       <Footer />
