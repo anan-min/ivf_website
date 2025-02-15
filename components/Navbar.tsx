@@ -3,13 +3,13 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 shadow-lg">
+    <nav className="bg-white  fixed w-full z-20 top-0 start-0 shadow-md">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
         <Link
-          href="#"
+          href="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <span className="self-center text-xl sm:text-2xl font-semibold text-[#ffc1b5] whitespace-nowrap dark:text-white pl-2">
+          <span className="self-center text-xl sm:text-3xl font-semibold whitespace-nowrap dark:text-white pl-2">
             Bloom
           </span>
         </Link>

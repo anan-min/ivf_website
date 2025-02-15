@@ -4,6 +4,10 @@ import {
   SketchLogoIcon,
 } from "@radix-ui/react-icons";
 import { BentoCard, BentoGrid } from "../components/magicui/bento-grid";
+import Image from "next/image";
+
+import planning_img from "@/public/planning.png";
+import packages_img from "@/public/packages.png";
 
 const features = [
   {
@@ -12,7 +16,13 @@ const features = [
     description: "Plan and schedule your journey with ease.",
     href: "/planning",
     cta: "Start planning",
-    background: <img className="absolute -right-20 -top-20 opacity-60" />,
+    background: (
+      <Image
+        src={packages_img}
+        className="absolute -right-20 -top-20 opacity-60 blur-md"
+        alt=""
+      />
+    ),
     className: "lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-4", // Largest area
   },
   {
@@ -21,7 +31,13 @@ const features = [
     description: "Find all the details and FAQs in one place.",
     href: "/infos",
     cta: "Learn more",
-    background: <img className="absolute -right-20 -top-20 opacity-60" />,
+    background: (
+      <Image
+        src={packages_img}
+        className="absolute -right-20 -top-20 opacity-60 blur-md"
+        alt=""
+      />
+    ),
     className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-1", // Medium size
   },
   {
@@ -30,7 +46,13 @@ const features = [
     description: "Explore various packages tailored to your needs.",
     href: "/packages",
     cta: "View packages",
-    background: <img className="absolute -right-20 -top-20 opacity-60" />,
+    background: (
+      <Image
+        src={planning_img}
+        className="absolute -right-20 -top-20 opacity-60 blur-md"
+        alt=""
+      />
+    ),
     className: "lg:col-start-3 lg:col-end-4 lg:row-start-2 lg:row-end-4", // Smallest area
   },
 ];

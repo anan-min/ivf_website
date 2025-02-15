@@ -19,6 +19,8 @@ type DatePickerProps = {
 };
 
 export function DatePicker({ date, setDate }: DatePickerProps) {
+
+
   return (
     <Popover>
       <PopoverTrigger asChild>
@@ -32,7 +34,7 @@ export function DatePicker({ date, setDate }: DatePickerProps) {
         >
           <CalendarIcon className="mr-2 h-4 w-4" />
           {date ? (
-            format(date, "PPP") 
+            format(date, "PPP")
           ) : (
             <span>When is your first day of period</span> // Placeholder text
           )}

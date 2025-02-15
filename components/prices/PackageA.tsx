@@ -10,11 +10,11 @@ import {
 
 const PackageA = () => {
   return (
-    <Card className="w-[350px]">
+    <Card className="w-full">
       <CardHeader>
         <CardTitle>
           <p className="text-sm text-gray-500">120K THB</p>
-          <h1 className="text-3xl font-bold mt-2 text-[#ffaf9f]">Package A</h1>
+          <h1 className="text-3xl font-bold mt-2">Package A</h1>
         </CardTitle>
         <CardDescription>
           Ovarian Stimulation with Hormonal Medication

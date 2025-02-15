@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { GridPattern } from "@/components/magicui/grid-pattern";
 import React from "react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -35,12 +36,16 @@ const HeroSection = () => {
           to your needs.
         </p>
         <div className="flex flex-row space-x-4">
-          <Button className="px-6 py-4 bg-white hover:bg-[#e9e3e0]  text-stone-7000 font-medium text-xl mt-4">
-            Learn More
-          </Button>
-          <Button className="text-grey-700 px-6 py-4 bg-[#ffc1b5] hover:bg-[#ffd5cd]  font-medium text-xl mt-4">
-            Start Planning
-          </Button>
+          <Link href={"/infos"}>
+            <Button className="px-6 py-4 bg-white hover:bg-[#e9e3e0]  text-stone-7000 font-medium text-xl mt-4">
+              Learn More
+            </Button>
+          </Link>
+          <Link href={"/planning"}>
+            <Button className="text-grey-700 px-6 py-4 bg-[#ffc1b5] hover:bg-[#ffd5cd]  font-medium text-xl mt-4">
+              Start Planning
+            </Button>
+          </Link>
         </div>
       </main>
     </div>

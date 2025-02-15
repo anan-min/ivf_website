@@ -7,9 +7,9 @@ import {
 
 const Faqs = () => {
   return (
-    <div className="flex flex-col lg:flex-row justify-between gap-6 items-center">
-      <div className="flex flex-row items-center p-4 border rounded-lg w-3/4">
-        <div className="text-2xl m-3">
+    <div className="flex flex-col sm:flex-row justify-between gap-4 sm:gap-4 items-center text-sm mb-4 pb-6">
+      <div className="flex flex-row items-center p-2 border rounded-lg w-3/4 text-wrap">
+        <div className="text-lg lg:text-2xl m-3">
           <FaQuestionCircle />
         </div>
         <p className="text-gray-600">
@@ -17,8 +17,8 @@ const Faqs = () => {
           understand it better.
         </p>
       </div>
-      <div className="flex flex-row items-center p-4 border rounded-lg w-3/4">
-        <div className="text-2xl m-3">
+      <div className="flex flex-row items-center p-2 border rounded-lg w-3/4">
+        <div className="text-lg lg:text-2xl m-3">
           <FaInfoCircle />
         </div>
         <p className="text-gray-600">
@@ -26,13 +26,13 @@ const Faqs = () => {
           benefit from it.
         </p>
       </div>
-      <div className="flex flex-row items-center p-4 border rounded-lg w-3/4">
-        <div className="text-2xl m-3">
+      <div className="flex flex-row items-center p-2 border rounded-lg w-3/4">
+        <div className="text-lg lg:text-2xl m-3">
           <FaExclamationCircle />
         </div>
         <p className="text-gray-600">
-          If you face any issues, here's where you'll find solutions to common
-          problems.
+          If you face any issues, here&apos;s where you&apos;ll find solutions
+          to common problems.
         </p>
       </div>
     </div>

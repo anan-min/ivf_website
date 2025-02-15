@@ -8,25 +8,26 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-interface SelectTimelineProps {
+interface SelectPackageProps {
   onChange: (value: string) => void;
 }
 
-const SelectTimeline = ({ onChange }: SelectTimelineProps) => {
+const SelectPackage = ({ onChange }: SelectPackageProps) => {
   return (
     <Select onValueChange={onChange}>
       <SelectTrigger className="w-[200px] bg-white">
-        <SelectValue placeholder="Select a IVF plan" />
+        <SelectValue placeholder="Select a Package" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectItem value="timeline1">Phase 1</SelectItem>
-          <SelectItem value="timeline2">Phase 2</SelectItem>
-          <SelectItem value="combined">combined</SelectItem>
+          <SelectItem value="package_a">Package A</SelectItem>
+          <SelectItem value="package_b">Package B</SelectItem>
+          <SelectItem value="package_c">Package C</SelectItem>
+          <SelectItem value="package_d">Package D</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>
   );
 };
 
-export default SelectTimeline;
+export default SelectPackage;
