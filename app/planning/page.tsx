@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { TimelineCard } from "@/components/Timeline/TimelineCard";
@@ -8,8 +9,15 @@ import SelectTimeline from "@/components/Timeline/SelectTimeline";
 import GridDecoration from "@/components/GridDecoration";
 
 const Page = () => {
+  const searchParams = useSearchParams();
+  const searchedSelectedPlan = searchParams.get("plan") || "a";
+
+  const parsedSelectedPlan = Array.isArray(searchedSelectedPlan)
+    ? searchedSelectedPlan[0]
+    : searchedSelectedPlan;
+
   const [selectedComponent, setSelectedComponent] = useState<string | null>(
-    "timeline1"
+    parsedSelectedPlan || "timeline1"
   );
 
   const renderSelectedComponent = () => {

@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PackageA from "@/components/prices/PackageA";
@@ -7,19 +8,26 @@ import GridDecoration from "@/components/GridDecoration";
 import SelectPackage from "@/components/prices/SelectPackage";
 
 const Page = () => {
+  const searchParams = useSearchParams();
+  const searchedSelectedPackage = searchParams.get("package") || "a";
+
+  const parseQueryPackage = Array.isArray(searchedSelectedPackage)
+    ? searchedSelectedPackage[0]
+    : searchedSelectedPackage;
+
   const [selectedPackage, setSelectedPackage] = useState<string | null>(
-    "package_a"
+    parseQueryPackage || "package_a"
   );
 
   const renderSelectedPackage = () => {
     switch (selectedPackage) {
-      case "package_a":
+      case "a":
         return <PackageA />;
-      case "package_b":
+      case "b":
         return <PackageA />;
-      case "package_c":
+      case "c":
         return <PackageA />;
-      case "package_d":
+      case "d":
         return <PackageA />;
       default:
         return null;

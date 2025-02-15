@@ -20,10 +20,10 @@ const SelectPackage = ({ onChange }: SelectPackageProps) => {
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectItem value="package_a">Package A</SelectItem>
-          <SelectItem value="package_b">Package B</SelectItem>
-          <SelectItem value="package_c">Package C</SelectItem>
-          <SelectItem value="package_d">Package D</SelectItem>
+          <SelectItem value="a">Package A</SelectItem>
+          <SelectItem value="b">Package B</SelectItem>
+          <SelectItem value="c">Package C</SelectItem>
+          <SelectItem value="d">Package D</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>
