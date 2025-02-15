@@ -36,7 +36,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="#"
+                href="/prices"
                 className="block py-2 px-3 text-sm sm:text-base text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:p-0 hover:text-[#ffb8aa]"
               >
                 Packages
