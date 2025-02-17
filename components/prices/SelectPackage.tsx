@@ -16,7 +16,7 @@ const SelectPackage = ({ onChange }: SelectPackageProps) => {
   return (
     <Select onValueChange={onChange}>
       <SelectTrigger className="w-[200px] bg-white">
-        <SelectValue placeholder="Select a Package" />
+        <SelectValue placeholder="Select an IVF Package" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>

@@ -16,7 +16,7 @@ const SelectTimeline = ({ onChange }: SelectTimelineProps) => {
   return (
     <Select onValueChange={onChange}>
       <SelectTrigger className="w-[200px] bg-white">
-        <SelectValue placeholder="Select a IVF plan" />
+        <SelectValue placeholder="Select an IVF plan" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>

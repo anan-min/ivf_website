@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { TimelineCard } from "@/components/Timeline/TimelineCard";
@@ -9,15 +8,8 @@ import SelectTimeline from "@/components/Timeline/SelectTimeline";
 import GridDecoration from "@/components/GridDecoration";
 
 const Page = () => {
-  const searchParams = useSearchParams();
-  const searchedSelectedPlan = searchParams.get("plan") || "a";
-
-  const parsedSelectedPlan = Array.isArray(searchedSelectedPlan)
-    ? searchedSelectedPlan[0]
-    : searchedSelectedPlan;
-
   const [selectedComponent, setSelectedComponent] = useState<string | null>(
-    parsedSelectedPlan || "timeline1"
+    "timeline1"
   );
 
   const renderSelectedComponent = () => {
@@ -25,8 +17,8 @@ const Page = () => {
       case "timeline1":
         return (
           <TimelineCard
-            title="Timeline 1"
-            description="Description 1"
+            title="IVF Treatment Timeline"
+            description="The IVF process begins in the chosen month, with the IVF cycle starting on the second day of your menstrual period. This phase includes ovarian stimulation, egg retrieval, and fertilization, typically lasting around two weeks."
             TimelineComponent={Phase1Timeline}
           />
         );

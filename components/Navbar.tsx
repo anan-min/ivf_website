@@ -20,7 +20,7 @@ const Navbar = () => {
           <ul className="flex flex-row p-3 md:space-x-8 rtl:space-x-reverse">
             <li>
               <Link
-                href="#"
+                href="/infos"
                 className="block py-2 px-3 text-sm sm:text-base text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:p-0 hover:text-[#ffb8aa]"
               >
                 Infos

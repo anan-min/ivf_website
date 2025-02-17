@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PackageA from "@/components/prices/PackageA";
@@ -8,15 +7,8 @@ import GridDecoration from "@/components/GridDecoration";
 import SelectPackage from "@/components/prices/SelectPackage";
 
 const Page = () => {
-  const searchParams = useSearchParams();
-  const searchedSelectedPackage = searchParams.get("package") || "a";
-
-  const parseQueryPackage = Array.isArray(searchedSelectedPackage)
-    ? searchedSelectedPackage[0]
-    : searchedSelectedPackage;
-
   const [selectedPackage, setSelectedPackage] = useState<string | null>(
-    parseQueryPackage || "package_a"
+    "package_a"
   );
 
   const renderSelectedPackage = () => {
@@ -42,10 +34,7 @@ const Page = () => {
       <main className="flex flex-col">
         <section className="w-full lg:w-10/12 flex flex-col mx-auto items-center justify-items-center min-h-screen p-8 gap-4 relative pt-32 z-10">
           <h1 className="text-4xl xl:text-5xl font-bold text-center">
-            <span className="bg-[#fcd8c9] rounded-xl py-1/2 px-2">
-              IVF/ICSI and PGT-A
-            </span>{" "}
-            2025 Packages
+            IVF/ICSI and PGT-A 2025 Packages
           </h1>
           <p className="text-gray-600 text-sm w-8/12 xl:w-6/12 text-center pt-2">
             Due to the enforcement of the Protection of Children Born by
