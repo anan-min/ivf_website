@@ -35,7 +35,7 @@ const Phase2Timeline = ({ selectedDate }: TimelineCardProps) => {
       description: <p>Start of the period cycle.</p>,
     },
     {
-      title: "Ovarian Stimulation",
+      title: "Begin Hormone Medications",
       time: getRangeFormatDate(firstDayOfPeriod, 2, 12),
       description: (
         <>
@@ -58,29 +58,22 @@ const Phase2Timeline = ({ selectedDate }: TimelineCardProps) => {
       ),
     },
     {
-      title: "Egg and Sperm Retrieval",
+      title: "Fly to Bangkok to see the doctor",
       time: getFormatDateByDay(firstDayOfPeriod, 13),
       description: (
-        <p>
-          Around {getFormatDateByDay(firstDayOfPeriod, 13, "MMM dd")} -{" "}
-          {getFormatDateByDay(firstDayOfPeriod, 14, "MMM dd")}
-          <br />
-          <Link href="/prices" className="underline font-bold">
-            Package B
-          </Link>{" "}
-          ( Egg/Sperm Retrieval - Embryo Report) <br />
-          From {getRangeFormatDate(firstDayOfPeriod, 14, 20)}
-        </p>
+        <p>UltraSound on {getFormatDateByDay(firstDayOfPeriod, 12)}</p>
       ),
     },
     {
-      title: "Fly back home",
-      time: getRangeFormatDate(firstDayOfPeriod, 15, 19),
-      description: <p>Fly back home</p>,
+      title: "Embryo Transfer",
+      time: getRangeFormatDate(firstDayOfPeriod, 19, 21),
+      description: (
+        <p>Ranged between {getRangeFormatDate(firstDayOfPeriod, 19, 21)}</p>
+      ),
     },
     {
-      title: "Fertilization + Embryo Culture",
-      time: getRangeFormatDate(firstDayOfPeriod, 15, 20),
+      title: "Fly Back Home",
+      time: getFormatDateByDay(firstDayOfPeriod, 22),
       description: (
         <p>
           Fertilization + Embryo Culture <br />
@@ -91,32 +84,11 @@ const Phase2Timeline = ({ selectedDate }: TimelineCardProps) => {
       ),
     },
     {
-      title: "Embryo Report",
-      time: "Released on December 23, 2021",
+      title: "Pregnancy Test",
+      time: getFormatDateByDay(firstDayOfPeriod, 32),
       description: (
         <>
-          <p>D1 {getFormatDateByDay(firstDayOfPeriod, 15)}</p>
-          <p>D5 {getFormatDateByDay(firstDayOfPeriod, 19)}</p>
-          <p>D6 {getFormatDateByDay(firstDayOfPeriod, 20)}</p>
-          <Link href="/prices" className="underline font-bold">
-            Package B
-          </Link>{" "}
-        </>
-      ),
-    },
-    {
-      title: "Chromosome Report",
-      time: "Released on December 23, 2021",
-      description: (
-        <>
-          <p>
-            Get started with dozens of web components and interactive elements.
-          </p>
-          <Link href="/prices" className="underline font-bold">
-            Package C
-          </Link>{" "}
-          (Chromozome Report) <br />
-          Around {getRangeFormatDate(firstDayOfPeriod, 28, 31)}
+          <p>Pregnancy Test</p>
         </>
       ),
     },

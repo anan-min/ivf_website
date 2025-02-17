@@ -26,9 +26,9 @@ const Page = () => {
       case "timeline2":
         return (
           <TimelineCard
-            title="Timeline 2"
-            description="Description 2"
-            TimelineComponent={Phase1Timeline}
+            title="Frozen Embryo Transfer"
+            description="Your IVF journey starts with your period and hormone medications, followed by a trip to Bangkok for the embryo transfer. After monitoring via ultrasound, you'll return home and take a pregnancy test to confirm the results."
+            TimelineComponent={Phase2Timeline}
           />
         );
       case "combined":
@@ -68,8 +68,8 @@ const Page = () => {
               TimelineComponent={Phase1Timeline}
             />
             <TimelineCard
-              title="Timeline 2"
-              description="Description 1"
+              title="Frozen Embryo Transfer"
+              description="Your IVF journey starts with your period and hormone medications, followed by a trip to Bangkok for the embryo transfer. After monitoring via ultrasound, you'll return home and take a pregnancy test to confirm the results."
               TimelineComponent={Phase2Timeline}
             />
             <TimelineCard
