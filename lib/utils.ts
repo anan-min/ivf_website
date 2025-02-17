@@ -12,7 +12,20 @@ export function getDatebyDay(date: Date, day: number): Date {
   return result;
 }
 
-export function getFormatDateByDay(date: Date, day: number): string {
+export function getFormatDateByDay(
+  date: Date,
+  day: number,
+  formatStr = "PP"
+): string {
   const result = getDatebyDay(date, day);
-  return format(result, "PP");
+  return format(result, formatStr);
+}
+
+export function getRangeFormatDate(
+  date: Date,
+  start: number,
+  end: number
+): string {
+  const result = getDatebyDay(date, start);
+  return format(result, "PP") + " - " + format(getDatebyDay(date, end), "PP");
 }

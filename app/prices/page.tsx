@@ -7,9 +7,7 @@ import GridDecoration from "@/components/GridDecoration";
 import SelectPackage from "@/components/prices/SelectPackage";
 
 const Page = () => {
-  const [selectedPackage, setSelectedPackage] = useState<string | null>(
-    "package_a"
-  );
+  const [selectedPackage, setSelectedPackage] = useState<string | null>("a");
 
   const renderSelectedPackage = () => {
     switch (selectedPackage) {
