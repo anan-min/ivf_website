@@ -20,9 +20,9 @@ const SelectTimeline = ({ onChange }: SelectTimelineProps) => {
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectItem value="timeline1">Phase 1</SelectItem>
-          <SelectItem value="timeline2">Phase 2</SelectItem>
-          <SelectItem value="combined">combined</SelectItem>
+          <SelectItem value="timeline1">IVF Treatment</SelectItem>
+          <SelectItem value="timeline2">Embryo Transfer</SelectItem>
+          <SelectItem value="combined">Combined</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>

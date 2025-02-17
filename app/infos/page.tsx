@@ -19,7 +19,7 @@ const page = () => {
           <p>
             Quick answer to questions you may have. Can&apos;t find what
             you&apos;re looking for? Contact us
-            <Link href="/contact">
+            <Link href="/contacts">
               <span className="underline"> Here.</span>
             </Link>
           </p>

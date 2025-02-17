@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export function getDatebyDay(date: Date, day: number): Date {
   const result = new Date(date);
-  result.setDate(date.getDate() + day);
+  result.setDate(date.getDate() + day - 1);
   return result;
 }
 

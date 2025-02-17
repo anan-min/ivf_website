@@ -1,28 +1,58 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import PackageA from "@/components/prices/PackageA";
+import Package from "@/components/prices/Package";
 import GridDecoration from "@/components/GridDecoration";
-import SelectPackage from "@/components/prices/SelectPackage";
+
+const EngPackageDataArray = [
+  {
+    title: "Package A",
+    price: "120K THB",
+    description: "Ovarian Stimulation with Hormonal Medication",
+    items: [
+      "Hormonal injections for ovarian stimulation (2,700–3,000 units, customized by the doctor).",
+      "6 injections to prevent premature ovulation.",
+      "1 injection to trigger ovulation.",
+      "3 ultrasound scans to monitor follicle growth (Ultrasound Follicle).",
+      "Doctor's fees for 3 follow-up visits to monitor follicle development.",
+    ],
+  },
+  {
+    title: "Package B",
+    price: "121K THB",
+    description: ": Oocyte Pick up",
+    items: [
+      "Doctor's and anesthesiologist's fees on the day of the procedure",
+      "Egg retrieval procedure and recovery room fees.",
+      "ICSI (Intracytoplasmic Sperm Injection) and embryo culture from Day 1 to Day 6.",
+      "Medications, medical supplies, and equipment required for the procedure in the operating room.",
+    ],
+  },
+  {
+    title: "Package E",
+    price: "12.6K THB",
+    description: "Embryo Freezing",
+    items: [
+      "Equipment and materials for embryo freezing.",
+      "Procedure fees for freezing embryos.",
+      "Note: Annual storage fee is not included in this package and costs 1,150 THB per embryo per year.",
+    ],
+  },
+  {
+    title: "Package D",
+    price: "72K THB",
+    description: "Embryo transfer",
+    items: [
+      "Doctor's fees for the procedure.",
+      "Fees for embryo thawing, medications, medical equipment, and necessary medical supplies for the embryo transfer",
+      "Procedure fees for transferring the embryo into the uterus.",
+      "12 days of take-home medications.",
+    ],
+  },
+];
 
 const Page = () => {
-  const [selectedPackage, setSelectedPackage] = useState<string | null>("a");
-
-  const renderSelectedPackage = () => {
-    switch (selectedPackage) {
-      case "a":
-        return <PackageA />;
-      case "b":
-        return <PackageA />;
-      case "c":
-        return <PackageA />;
-      case "d":
-        return <PackageA />;
-      default:
-        return null;
-    }
-  };
   return (
     <div className="relative">
       <div className="absolute inset-0 z-0">
@@ -42,17 +72,36 @@ const Page = () => {
             fertility center starting August 1, 2015.
           </p>
 
-          <div className="hidden lg:flex flex-col gap-12 w-full z-10">
-            <PackageA />
-            <PackageA />
-            <PackageA />
-            <PackageA />
+          <div className="flex flex-col lg:flex-row gap-12 w-full z-10">
+            {EngPackageDataArray.map((pkg, index) => (
+              <Package
+                key={index}
+                title={pkg.title}
+                price={pkg.price}
+                description={pkg.description}
+                items={pkg.items}
+              />
+            ))}
           </div>
-
-          <div className="w-full lg:hidden z-10">
-            <SelectPackage onChange={setSelectedPackage} />
-          </div>
-          <div className="w-full lg:hidden z-10">{renderSelectedPackage()}</div>
+          <section className="w-full mx-2 mt-10 text-gray-600">
+            <h2 className="text-md">Estimated Total: 325.6K THB s</h2>
+            <h3 className="text-md mt-2 font-semibold ">
+              {" "}
+              All Packages Above are Excluded
+            </h3>
+            <ol className="space-y-2 text-sm mt-2">
+              <li>
+                {" "}
+                1. Non-IVF related treatment costs (e.g., blood tests, X-rays,
+                home medication, special medical equipment).
+              </li>
+              <li>2. Additional or advanced diagnostic tests not specified.</li>
+              <li>
+                3. Hospital fees, doctor fees, nurse fees, and any other
+                unspecified costs not mentioned in the package.
+              </li>
+            </ol>
+          </section>
         </section>
       </main>
       <Footer />

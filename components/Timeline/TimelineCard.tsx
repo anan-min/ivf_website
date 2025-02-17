@@ -29,7 +29,7 @@ export function TimelineCard({
         <CardTitle>
           <h1>{title}</h1>
         </CardTitle>
-        <CardDescription>{description}</CardDescription>
+        <CardDescription className="lg:w-1/2">{description}</CardDescription>
         <div className="pt-3">
           <DatePicker date={selectedDate} setDate={setSelectedDate} />
         </div>

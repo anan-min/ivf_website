@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { TimelineCard } from "@/components/Timeline/TimelineCard";
 import Phase1Timeline from "@/components/Timeline/Phase1Timeline";
+import Phase2Timeline from "@/components/Timeline/Phase2Timeline";
 import SelectTimeline from "@/components/Timeline/SelectTimeline";
 import GridDecoration from "@/components/GridDecoration";
 
@@ -62,14 +63,14 @@ const Page = () => {
           </div>
           <div className="hidden lg:flex flex-col gap-12 w-full z-10">
             <TimelineCard
-              title="Timeline 1"
-              description="Description 1"
+              title="IVF Treatment Timeline"
+              description="The IVF process begins in the chosen month, with the IVF cycle starting on the second day of your menstrual period. This phase includes ovarian stimulation, egg retrieval, and fertilization, typically lasting around two weeks."
               TimelineComponent={Phase1Timeline}
             />
             <TimelineCard
               title="Timeline 2"
               description="Description 1"
-              TimelineComponent={Phase1Timeline}
+              TimelineComponent={Phase2Timeline}
             />
             <TimelineCard
               title="Combined Timeline"

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Icon = () => (
   <svg
-    className="w-2.5 h-2.5 text-blue-800 dark:text-blue-300"
+    className="w-2.5 h-2.5 text-[#ffc1b5]"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     fill="currentColor"
@@ -31,97 +31,114 @@ const Phase1Timeline = ({ selectedDate }: TimelineCardProps) => {
   const phases: TimelinePhase[] = [
     {
       title: "Period Start",
-      time: getFormatDateByDay(firstDayOfPeriod, 0),
+      time: getFormatDateByDay(firstDayOfPeriod, 1),
       description: <p>Start of the period cycle.</p>,
     },
     {
-      title: "Seeing Doctor",
-      time: getFormatDateByDay(firstDayOfPeriod, 1),
-      description: (
-        <div>
-          <p>Ultrasound examination</p>
-          <p>Consultation with the doctor</p>
-          <Link href="/prices" className="underline font-bold">
-            Package A
-          </Link>{" "}
-          From {getFormatDateByDay(firstDayOfPeriod, 1, "MMM dd")} to{" "}
-          {getFormatDateByDay(firstDayOfPeriod, 11, "MMM dd, yyyy")}
-        </div>
-      ),
-    },
-    {
       title: "Ovarian Stimulation",
-      time: getRangeFormatDate(firstDayOfPeriod, 1, 10),
+      time: getRangeFormatDate(firstDayOfPeriod, 2, 12),
       description: (
-        <div>
-          <p>
-            Injection from {getFormatDateByDay(firstDayOfPeriod, 1, "MMM dd")}{" "}
-            to {getFormatDateByDay(firstDayOfPeriod, 10, "MMM dd, yyyy")}
-          </p>
-          <p>BetaHCG on {getFormatDateByDay(new Date(), 11)}</p>
+        <>
+          Ultrasound on {getFormatDateByDay(new Date(), 2)}
+          <br />
+          Injection from {getFormatDateByDay(
+            firstDayOfPeriod,
+            2,
+            "MMM dd"
+          )} to {getFormatDateByDay(firstDayOfPeriod, 11, "MMM dd, yyyy")}
+          <br />
+          BetaHCG on {getFormatDateByDay(new Date(), 12)}
+          <br />
           <Link href="/prices" className="underline font-bold">
             Package A
           </Link>{" "}
-          Ended {getFormatDateByDay(new Date(), 12, "MMM dd, yyyy")}
-        </div>
+          ( Period Start - End of Ovarian Stimulation ) <br />
+          From {getRangeFormatDate(firstDayOfPeriod, 1, 12)}
+        </>
       ),
     },
     {
       title: "Egg and Sperm Retrieval",
-      time: getFormatDateByDay(new Date(), 1),
+      time: getFormatDateByDay(firstDayOfPeriod, 13),
       description: (
         <p>
-          Get started with dozens of web components and interactive elements.
+          Around {getFormatDateByDay(firstDayOfPeriod, 13, "MMM dd")} -{" "}
+          {getFormatDateByDay(firstDayOfPeriod, 14, "MMM dd")}
+          <br />
+          <Link href="/prices" className="underline font-bold">
+            Package B
+          </Link>{" "}
+          ( Egg/Sperm Retrieval - Embryo Report) <br />
+          From {getRangeFormatDate(firstDayOfPeriod, 14, 20)}
         </p>
       ),
     },
     {
       title: "Fly back home",
-      time: "Released on December 23, 2021",
-      description: (
-        <p>
-          Get started with dozens of web components and interactive elements.
-        </p>
-      ),
+      time: getRangeFormatDate(firstDayOfPeriod, 15, 19),
+      description: <p>Fly back home</p>,
     },
     {
       title: "Fertilization + Embryo Culture",
-      time: "Released on December 23, 2021",
+      time: getRangeFormatDate(firstDayOfPeriod, 15, 20),
       description: (
         <p>
-          Get started with dozens of web components and interactive elements.
+          Fertilization + Embryo Culture <br />
+          <Link href="/prices" className="underline font-bold">
+            Package B
+          </Link>{" "}
         </p>
       ),
     },
     {
-      title: "Flowbite Library v1.2.0",
-      time: "Released on December 23, 2021",
+      title: "Embryo Report",
+      time: getRangeFormatDate(firstDayOfPeriod, 15, 20),
       description: (
-        <p>
-          Get started with dozens of web components and interactive elements.
-        </p>
+        <>
+          <p>D1 {getFormatDateByDay(firstDayOfPeriod, 15)}</p>
+          <p>D5 {getFormatDateByDay(firstDayOfPeriod, 19)}</p>
+          <p>D6 {getFormatDateByDay(firstDayOfPeriod, 20)}</p>
+          <Link href="/prices" className="underline font-bold">
+            Package B
+          </Link>{" "}
+        </>
+      ),
+    },
+    {
+      title: "Chromosome Report",
+      time: getRangeFormatDate(firstDayOfPeriod, 28, 31),
+      description: (
+        <>
+          <p>around {getRangeFormatDate(firstDayOfPeriod, 28, 31)}</p>
+          <Link href="/prices" className="underline font-bold">
+            Package C
+          </Link>{" "}
+          (Chromozome Report) <br />
+          Around {getRangeFormatDate(firstDayOfPeriod, 28, 31)}
+        </>
       ),
     },
   ];
 
   return (
-    <ol className="items-center lg:flex">
+    <ol className="items-center lg:flex lg:items-start lg:gap-2">
       {phases.map((phase, index) => (
-        <li key={index} className="relative mb-6 lg:mb-0">
-          <div className="flex items-center">
-            <div className="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 lg:ring-8 dark:ring-gray-900 shrink-0">
+        <li key={index} className="relative mb-6 lg:mb-0 lg:w-1/3">
+          <div className="flex items-center justify-start lg:justify-center">
+            <div className="z-10 flex items-center justify-center w-6 h-6 bg-[#ffe6db] rounded-full ring-0 ring-white dark:bg-blue-900 lg:ring-8 dark:ring-gray-900 shrink-0">
               <Icon />
             </div>
-            <div className="hidden lg:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+            {/* Connecting line, flex-grow for alignment */}
+            <div className="hidden lg:flex flex-grow w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
           </div>
           <div className="mt-3 lg:pe-8">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
               {phase.title}
             </h3>
-            <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+            <time className="block mb-2 text-sm font-normal leading-none text-gray-800">
               {phase.time}
             </time>
-            <div className="text-base font-normal text-gray-500 dark:text-gray-400">
+            <div className="text-sm font-normal text-gray-500 dark:text-gray-700">
               {phase.description}
             </div>
           </div>

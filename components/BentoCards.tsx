@@ -12,7 +12,7 @@ import packages_img from "@/public/packages.png";
 const features = [
   {
     Icon: CalendarIcon,
-    name: "Planning",
+    name: "Plans",
     description: "Plan and schedule your journey with ease.",
     href: "/planning",
     cta: "Start planning",
@@ -44,7 +44,7 @@ const features = [
     Icon: SketchLogoIcon,
     name: "Packages",
     description: "Explore various packages tailored to your needs.",
-    href: "/packages",
+    href: "/prices",
     cta: "View packages",
     background: (
       <Image
