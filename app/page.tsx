@@ -3,10 +3,12 @@ import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
 import Faqs from "@/components/Faqs";
 import { BentoCards } from "@/components/BentoCards";
+import ContactButton from "@/components/contact";
 
 export default function Home() {
   return (
-    <div>
+    <div className="relative">
+      <ContactButton />
       <Navbar />
       <main className="flex flex-col">
         <HeroSection />
