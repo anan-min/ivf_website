@@ -32,90 +32,92 @@ const Phase1Timeline = ({ selectedDate }: TimelineCardProps) => {
     {
       title: "Period Start",
       time: getFormatDateByDay(firstDayOfPeriod, 1),
-      description: <p>Start of the period cycle.</p>,
+      description: (
+        <ul>
+          <li>Start of the period cycle.</li>
+        </ul>
+      ),
     },
     {
       title: "Ovarian Stimulation",
       time: getRangeFormatDate(firstDayOfPeriod, 2, 12),
       description: (
-        <>
-          Ultrasound on {getFormatDateByDay(new Date(), 2)}
-          <br />
-          Injection from {getFormatDateByDay(
-            firstDayOfPeriod,
-            2,
-            "MMM dd"
-          )} to {getFormatDateByDay(firstDayOfPeriod, 11, "MMM dd, yyyy")}
-          <br />
-          BetaHCG on {getFormatDateByDay(new Date(), 12)}
-          <br />
-          <Link href="/prices" className="underline font-bold">
-            Package A
-          </Link>{" "}
-          ( Period Start - End of Ovarian Stimulation ) <br />
-          From {getRangeFormatDate(firstDayOfPeriod, 1, 12)}
-        </>
+        <ul>
+          <li>- Ultrasound on {getFormatDateByDay(new Date(), 2)}</li>
+          <li>
+            - Ovulation Triggering on {getFormatDateByDay(new Date(), 12)}
+          </li>
+          <li>
+            <br />
+            <Link href="/prices" className="underline font-bold">
+              Package A
+            </Link>{" "}
+            (Period Start - End of Ovarian Stimulation)
+          </li>
+        </ul>
       ),
     },
     {
       title: "Egg and Sperm Retrieval",
       time: getFormatDateByDay(firstDayOfPeriod, 13),
       description: (
-        <p>
-          Around {getFormatDateByDay(firstDayOfPeriod, 13, "MMM dd")} -{" "}
-          {getFormatDateByDay(firstDayOfPeriod, 14, "MMM dd")}
-          <br />
-          <Link href="/prices" className="underline font-bold">
-            Package B
-          </Link>{" "}
-          ( Egg/Sperm Retrieval - Embryo Report) <br />
-          From {getRangeFormatDate(firstDayOfPeriod, 14, 20)}
-        </p>
+        <ul>
+          <li>
+            Around {getFormatDateByDay(firstDayOfPeriod, 13, "MMM dd")} -{" "}
+            {getFormatDateByDay(firstDayOfPeriod, 15, "MMM dd")}
+          </li>
+
+          <li>
+            <Link href="/prices" className="underline font-bold">
+              Package B
+            </Link>{" "}
+            (Egg/Sperm Retrieval - End of Embryo Culture)
+          </li>
+        </ul>
       ),
     },
     {
       title: "Fly back home",
-      time: getRangeFormatDate(firstDayOfPeriod, 15, 19),
-      description: <p>Fly back home</p>,
+      time: getRangeFormatDate(firstDayOfPeriod, 16, 18),
+      description: (
+        <ul>
+          <li>Fly back home</li>
+        </ul>
+      ),
     },
     {
       title: "Fertilization + Embryo Culture",
       time: getRangeFormatDate(firstDayOfPeriod, 15, 20),
       description: (
-        <p>
-          Fertilization + Embryo Culture <br />
-          <Link href="/prices" className="underline font-bold">
-            Package B
-          </Link>{" "}
-        </p>
+        <ul>
+          <li>Fertilization + Embryo Culture</li>
+        </ul>
       ),
     },
     {
-      title: "Embryo Report",
+      title: "Embryo Biopsy",
       time: getRangeFormatDate(firstDayOfPeriod, 15, 20),
       description: (
-        <>
-          <p>D1 {getFormatDateByDay(firstDayOfPeriod, 15)}</p>
-          <p>D5 {getFormatDateByDay(firstDayOfPeriod, 19)}</p>
-          <p>D6 {getFormatDateByDay(firstDayOfPeriod, 20)}</p>
-          <Link href="/prices" className="underline font-bold">
-            Package B
-          </Link>{" "}
-        </>
+        <ul>
+          <li>- D5 {getFormatDateByDay(firstDayOfPeriod, 19)}</li>
+          <li>- D6 {getFormatDateByDay(firstDayOfPeriod, 20)}</li>
+          <br />
+          <li>
+            <Link href="/prices" className="underline font-bold">
+              Package C
+            </Link>{" "}
+            (PGT-A and 1 year Embryo freezing (for 2 embryos))
+          </li>
+        </ul>
       ),
     },
     {
       title: "Chromosome Report",
-      time: getRangeFormatDate(firstDayOfPeriod, 28, 31),
+      time: getRangeFormatDate(firstDayOfPeriod, 25, 26),
       description: (
-        <>
-          <p>around {getRangeFormatDate(firstDayOfPeriod, 28, 31)}</p>
-          <Link href="/prices" className="underline font-bold">
-            Package C
-          </Link>{" "}
-          (Chromozome Report) <br />
-          Around {getRangeFormatDate(firstDayOfPeriod, 28, 31)}
-        </>
+        <ul>
+          <li>Around {getRangeFormatDate(firstDayOfPeriod, 25, 26)}</li>
+        </ul>
       ),
     },
   ];
@@ -125,11 +127,11 @@ const Phase1Timeline = ({ selectedDate }: TimelineCardProps) => {
       {phases.map((phase, index) => (
         <li key={index} className="relative mb-6 lg:mb-0 lg:w-1/3">
           <div className="flex items-center justify-start lg:justify-center">
-            <div className="z-10 flex items-center justify-center w-6 h-6 bg-[#ffe6db] rounded-full ring-0 ring-white dark:bg-blue-900 lg:ring-8 dark:ring-gray-900 shrink-0">
+            <div className="z-10 flex items-center justify-center w-6 h-6 bg-[#ffe6db] rounded-full ring-0 ring-white dark:bg-blue-900 lg:ring-8 dark:ring-gray-800 shrink-0">
               <Icon />
             </div>
             {/* Connecting line, flex-grow for alignment */}
-            <div className="hidden lg:flex flex-grow w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+            <div className="hidden lg:flex flex-grow w-full bg-gray-200 h-0.5 dark:bg-gray-800"></div>
           </div>
           <div className="mt-3 lg:pe-8">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -138,7 +140,7 @@ const Phase1Timeline = ({ selectedDate }: TimelineCardProps) => {
             <time className="block mb-2 text-sm font-normal leading-none text-gray-800">
               {phase.time}
             </time>
-            <div className="text-sm font-normal text-gray-500 dark:text-gray-700">
+            <div className="text-sm font-normal text-gray-600">
               {phase.description}
             </div>
           </div>

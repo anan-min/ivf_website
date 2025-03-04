@@ -32,64 +32,77 @@ const Phase2Timeline = ({ selectedDate }: TimelineCardProps) => {
     {
       title: "Period Start",
       time: getFormatDateByDay(firstDayOfPeriod, 1),
-      description: <p>Start of the period cycle.</p>,
+      description: (
+        <ul>
+          <li>Start of the period cycle.</li>
+          <br />
+          <li>
+            <Link href="/prices" className="underline font-bold">
+              Package D
+            </Link>{" "}
+            (Embryo Transfer)
+          </li>
+        </ul>
+      ),
     },
     {
       title: "Begin Hormone Medications",
       time: getRangeFormatDate(firstDayOfPeriod, 2, 12),
       description: (
-        <>
-          Ultrasound on {getFormatDateByDay(new Date(), 2)}
-          <br />
-          Injection from {getFormatDateByDay(
-            firstDayOfPeriod,
-            2,
-            "MMM dd"
-          )} to {getFormatDateByDay(firstDayOfPeriod, 11, "MMM dd, yyyy")}
-          <br />
-          BetaHCG on {getFormatDateByDay(new Date(), 12)}
-          <br />
-          <Link href="/prices" className="underline font-bold">
-            Package A
-          </Link>{" "}
-          ( Period Start - End of Ovarian Stimulation ) <br />
-          From {getRangeFormatDate(firstDayOfPeriod, 1, 12)}
-        </>
+        <ul>
+          <li>- Ultrasound on {getFormatDateByDay(new Date(), 2)}</li>
+          <li>
+            - Blood test for Estradiol on{" "}
+            {getRangeFormatDate(firstDayOfPeriod, 7, 8)}
+          </li>
+        </ul>
       ),
     },
     {
       title: "Fly to Bangkok to see the doctor",
       time: getFormatDateByDay(firstDayOfPeriod, 13),
       description: (
-        <p>UltraSound on {getFormatDateByDay(firstDayOfPeriod, 12)}</p>
+        <ul>
+          <li>
+            - Fly to Bangkok for ultrasound before the thawed embryo transfer.
+          </li>
+          <li>
+            - Ultrasound on {getRangeFormatDate(firstDayOfPeriod, 13, 15)}
+          </li>
+        </ul>
       ),
     },
     {
       title: "Embryo Transfer",
-      time: getRangeFormatDate(firstDayOfPeriod, 19, 21),
+      time: getRangeFormatDate(firstDayOfPeriod, 18, 21),
       description: (
-        <p>Ranged between {getRangeFormatDate(firstDayOfPeriod, 19, 21)}</p>
+        <ul>
+          <li>Range between {getRangeFormatDate(firstDayOfPeriod, 18, 21)}</li>
+        </ul>
       ),
     },
     {
       title: "Fly Back Home",
-      time: getFormatDateByDay(firstDayOfPeriod, 22),
+      time: getRangeFormatDate(firstDayOfPeriod, 22, 25),
       description: (
-        <p>
-          Fertilization + Embryo Culture <br />
-          <Link href="/prices" className="underline font-bold">
-            Package B
-          </Link>{" "}
-        </p>
+        <ul>
+          <li>
+            Around 4 days after the embryo transfer (
+            {getRangeFormatDate(firstDayOfPeriod, 22, 25)})
+          </li>
+        </ul>
       ),
     },
     {
       title: "Pregnancy Test",
-      time: getFormatDateByDay(firstDayOfPeriod, 32),
+      time: getRangeFormatDate(firstDayOfPeriod, 28, 31),
       description: (
-        <>
-          <p>Pregnancy Test</p>
-        </>
+        <ul>
+          <li>
+            Around 10 days after the embryo transfer (
+            {getRangeFormatDate(firstDayOfPeriod, 28, 31)})
+          </li>
+        </ul>
       ),
     },
   ];
@@ -99,11 +112,11 @@ const Phase2Timeline = ({ selectedDate }: TimelineCardProps) => {
       {phases.map((phase, index) => (
         <li key={index} className="relative mb-6 lg:mb-0 lg:w-1/3">
           <div className="flex items-center justify-start lg:justify-center">
-            <div className="z-10 flex items-center justify-center w-6 h-6 bg-[#ffe6db] rounded-full ring-0 ring-white dark:bg-blue-900 lg:ring-8 dark:ring-gray-900 shrink-0">
+            <div className="z-10 flex items-center justify-center w-6 h-6 bg-[#ffe6db] rounded-full ring-0 ring-white dark:bg-blue-900 lg:ring-8 dark:ring-gray-800 shrink-0">
               <Icon />
             </div>
             {/* Connecting line, flex-grow for alignment */}
-            <div className="hidden lg:flex flex-grow w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+            <div className="hidden lg:flex flex-grow w-full bg-gray-200 h-0.5 dark:bg-gray-800"></div>
           </div>
           <div className="mt-3 lg:pe-8">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -112,7 +125,7 @@ const Phase2Timeline = ({ selectedDate }: TimelineCardProps) => {
             <time className="block mb-2 text-sm font-normal leading-none text-gray-800">
               {phase.time}
             </time>
-            <div className="text-sm font-normal text-gray-500 dark:text-gray-700">
+            <div className="text-sm font-normal text-gray-600">
               {phase.description}
             </div>
           </div>

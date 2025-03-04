@@ -7,6 +7,7 @@ import Phase1Timeline from "@/components/Timeline/Phase1Timeline";
 import Phase2Timeline from "@/components/Timeline/Phase2Timeline";
 import SelectTimeline from "@/components/Timeline/SelectTimeline";
 import GridDecoration from "@/components/GridDecoration";
+import CombinedTimeline from "@/components/Timeline/CombinedTimeline";
 
 const Page = () => {
   const [selectedComponent, setSelectedComponent] = useState<string | null>(
@@ -26,8 +27,8 @@ const Page = () => {
       case "timeline2":
         return (
           <TimelineCard
-            title="Frozen Embryo Transfer"
-            description="Your IVF journey starts with your period and hormone medications, followed by a trip to Bangkok for the embryo transfer. After monitoring via ultrasound, you'll return home and take a pregnancy test to confirm the results."
+            title="Frozen Thawed Embryo Transfer"
+            description="Your embryo transfer journey starts with taking hormonal medications at the beginning of your periods and then, the blood test of hormonal level on day 7-8 of periods cycle, and followed by a trip to Bangkok for ultrasound monitoring. After the thawed embryo transfer, you will return home and undergo the blood test for pregnancy later."
             TimelineComponent={Phase2Timeline}
           />
         );
@@ -35,8 +36,8 @@ const Page = () => {
         return (
           <TimelineCard
             title="Combined Timeline"
-            description="Description 3"
-            TimelineComponent={Phase1Timeline}
+            description="he IVF process begins in the chosen month, with the IVF cycle starting on the second day of your menstrual period. This phase includes ovarian stimulation, egg retrieval, and fertilization, typically lasting around two weeks."
+            TimelineComponent={CombinedTimeline}
           />
         );
       default:
@@ -75,7 +76,7 @@ const Page = () => {
             <TimelineCard
               title="Combined Timeline"
               description="Description 1"
-              TimelineComponent={Phase1Timeline}
+              TimelineComponent={CombinedTimeline}
             />
           </div>
         </section>

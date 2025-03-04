@@ -30,13 +30,15 @@ const EngPackageDataArray = [
     ],
   },
   {
-    title: "Package E",
-    price: "12.6K THB",
-    description: "Embryo Freezing",
+    title: "Package C",
+    price: "70K THB",
+    description: "PGT-A and 1 year Embryo freezing (for 2 embryos)",
     items: [
-      "Equipment and materials for embryo freezing.",
-      "Procedure fees for freezing embryos.",
-      "Note: Annual storage fee is not included in this package and costs 1,150 THB per embryo per year.",
+      "Annual storage fee for frozen embryos or blastocysts (1 year).",
+      "Biopsy equipment and reagents for embryo biopsies.",
+      "Comprehensive Genetic Hybridization (CGH) analysis for each embryo",
+      "Procedures and equipment for embryo freezing and biopsy cell extraction.",
+      "Note: Each additional embryo beyond the first two costs 15,000 THB per embryo",
     ],
   },
   {
@@ -84,7 +86,7 @@ const Page = () => {
             ))}
           </div>
           <section className="w-full mx-2 mt-10 text-gray-600">
-            <h2 className="text-md">Estimated Total: 325.6K THB s</h2>
+            <h2 className="text-md">Estimated Total: 383K THB s</h2>
             <h3 className="text-md mt-2 font-semibold ">
               {" "}
               All Packages Above are Excluded
